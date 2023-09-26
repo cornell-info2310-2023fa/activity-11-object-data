@@ -34,6 +34,7 @@ export default function App() {
 
   const accordionPanels = reactDocs.map(doc => (
     <AccordionPanel
+      key={doc.id}
       title={doc.title}
       isExpanded={panelActiveIndex === doc.id}
       onActivate={() => setPanelActiveIndex(doc.id)}
